@@ -159,10 +159,20 @@ deploie un Stack a partir d'un depot Git (clone + `docker compose up
 
 Le detail des etapes (connexion a Komodo, configuration du Stack, variables
 d'environnement, verification) est documente dans
-[`deploy/README-KOMODO.md`](deploy/README-KOMODO.md). Reste a confirmer avec
-l'equipe : le depot Git commun a utiliser comme source du Stack, et le port
-exact dans 5200-5299 (en cas d'autres services deployes par l'equipe sur le
-meme serveur).
+[`deploy/README-KOMODO.md`](deploy/README-KOMODO.md).
+
+**Deploiement realise et verifie** : le Stack `predictops` est configure
+avec le depot [`iris237111/predictops-mlops-api`](https://github.com/iris237111/predictops-mlops-api)
+comme source, deployé sur le serveur `vh3` et exposé sur le port `5200`.
+Difficulte rencontree : le premier build a echoue sur un timeout reseau pip
+(`ReadTimeoutError` vers `files.pythonhosted.org`) lors du telechargement des
+dependances sur le serveur partage ; corrige en ajoutant
+`--default-timeout=120 --retries 5` a la commande `pip install` du
+`Dockerfile`. Apres correction, le Stack est passe a l'etat **RUNNING** et
+l'API repond publiquement :
+
+- `GET http://exp.s3.fsbm.ma:5200/health` -> `{"status":"ok","model_loaded":true,"model_type":"GradientBoostingClassifier"}`
+- Swagger UI accessible sur `http://exp.s3.fsbm.ma:5200/docs`
 
 ## 8.10 Monitoring du service
 
