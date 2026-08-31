@@ -1,0 +1,17 @@
+services:
+  predictive-maintenance-api:
+    build: .
+    image: predictive-maintenance-api:latest
+    container_name: predictive-maintenance-api
+    ports:
+      - "${API_PORT:-5200}:8000"
+    environment:
+      - MODEL_PATH=/app/models/best_model.joblib
+      - HISTORY_SIZE=15
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    restart: unless-stopped
