@@ -1,0 +1,92 @@
+{
+  "data_source": "duckdb:main.ml_features",
+  "rows": 99963,
+  "features_used": [
+    "machine_id",
+    "temperature",
+    "vibration",
+    "humidity",
+    "pressure",
+    "energy_consumption",
+    "temperature_lag_1",
+    "temperature_diff_1",
+    "temperature_roll5_mean",
+    "temperature_roll5_std",
+    "temperature_roll15_mean",
+    "vibration_lag_1",
+    "vibration_diff_1",
+    "vibration_roll5_mean",
+    "vibration_roll5_std",
+    "vibration_roll15_mean",
+    "humidity_lag_1",
+    "humidity_diff_1",
+    "humidity_roll5_mean",
+    "humidity_roll5_std",
+    "humidity_roll15_mean",
+    "pressure_lag_1",
+    "pressure_diff_1",
+    "pressure_roll5_mean",
+    "pressure_roll5_std",
+    "pressure_roll15_mean",
+    "energy_consumption_lag_1",
+    "energy_consumption_diff_1",
+    "energy_consumption_roll5_mean",
+    "energy_consumption_roll5_std",
+    "energy_consumption_roll15_mean",
+    "recorded_hour",
+    "recorded_dayofweek",
+    "recorded_month"
+  ],
+  "target": "maintenance_required",
+  "train_rows": 59977,
+  "validation_rows": 19993,
+  "test_rows": 19993,
+  "positive_rate": 0.19698288366695677,
+  "best_model": "gradient_boosting",
+  "best_threshold": 0.18000000000000005,
+  "best_metrics": {
+    "accuracy": 0.8909118191366978,
+    "precision": 0.9530685920577617,
+    "recall": 0.4692737430167598,
+    "f1_score": 0.628892291985707,
+    "roc_auc": 0.7368997252493057,
+    "threshold": 0.18000000000000005,
+    "validation_f1_score": 0.6179890560875513
+  },
+  "classification_report": {
+    "0": {
+      "precision": 0.8842361803478453,
+      "recall": 0.994331983805668,
+      "f1-score": 0.9360579319241256,
+      "support": 16055.0
+    },
+    "1": {
+      "precision": 0.9530685920577617,
+      "recall": 0.4692737430167598,
+      "f1-score": 0.628892291985707,
+      "support": 3938.0
+    },
+    "accuracy": 0.8909118191366978,
+    "macro avg": {
+      "precision": 0.9186523862028035,
+      "recall": 0.7318028634112139,
+      "f1-score": 0.7824751119549163,
+      "support": 19993.0
+    },
+    "weighted avg": {
+      "precision": 0.8977940274600171,
+      "recall": 0.8909118191366978,
+      "f1-score": 0.8755558416886686,
+      "support": 19993.0
+    }
+  },
+  "mlflow_run_id": "be83f758da414c448efbfd3fd1bd6732",
+  "mlflow_registered_version": 1,
+  "artifacts": {
+    "model": "C:\\Users\\DELL\\Downloads\\Partie_Maroua\\Partie_Maroua\\project\\modeling\\models\\best_model.joblib",
+    "metrics": "C:\\Users\\DELL\\Downloads\\Partie_Maroua\\Partie_Maroua\\project\\modeling\\outputs\\metrics.json",
+    "comparison": "C:\\Users\\DELL\\Downloads\\Partie_Maroua\\Partie_Maroua\\project\\modeling\\outputs\\model_comparison.csv",
+    "confusion_matrix": "C:\\Users\\DELL\\Downloads\\Partie_Maroua\\Partie_Maroua\\project\\modeling\\outputs\\confusion_matrix.png",
+    "feature_importance": "C:\\Users\\DELL\\Downloads\\Partie_Maroua\\Partie_Maroua\\project\\modeling\\outputs\\feature_importance.png"
+  }
+}

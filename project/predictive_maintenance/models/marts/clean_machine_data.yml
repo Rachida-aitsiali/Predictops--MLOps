@@ -1,0 +1,92 @@
+version: 2
+
+models:
+  - name: clean_machine_data
+    description: "Données nettoyées des capteurs machines, après suppression des vibrations négatives physiquement impossibles."
+    columns:
+      - name: machine_id
+        description: "Identifiant de la machine."
+        data_tests:
+          - not_null
+
+      - name: recorded_at
+        description: "Horodatage de la mesure."
+        data_tests:
+          - not_null
+
+      - name: vibration
+        description: "Niveau de vibration mesuré (doit être positif ou nul)."
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: ">= 0"
+
+      - name: temperature
+        description: "Température mesurée."
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "between 0 and 200"
+
+      - name: humidity
+        description: "Humidité mesurée, en pourcentage."
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "between 0 and 100"
+
+      - name: pressure
+        description: "Pression mesurée."
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "> 0"
+
+      - name: predicted_remaining_life
+        description: "Durée de vie restante estimée (en jours ou heures)."
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: ">= 0"
+
+      - name: downtime_risk
+        description: "Score de risque d'arrêt, entre 0 et 1."
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "between 0 and 1"
+
+      - name: machine_status
+        description: "État de la machine : 0 (arrêtée), 1 (en fonctionnement), 2 (en panne)."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1, 2]
+
+      - name: anomaly_flag
+        description: "Indicateur binaire d'anomalie détectée."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+      - name: maintenance_required
+        description: "Variable cible : indique si une maintenance est nécessaire."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+      - name: failure_type
+        description: "Type de panne détectée, ou 'Normal' si aucune panne."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Normal', 'Overheating', 'Pressure Drop', 'Vibration Issue', 'Electrical Fault']
+
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - machine_id
+              - recorded_at

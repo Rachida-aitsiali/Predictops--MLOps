@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: raw_sensor_data
+        description: "Données brutes des capteurs machines, ingérées via dlt par Imane, stockées par Zineb dans DuckDB."
+        columns:
+          - name: timestamp
+            description: "Horodatage de la mesure du capteur."
+          - name: machine_id
+            description: "Identifiant de la machine."
+          - name: temperature
+            description: "Température mesurée par le capteur."
+          - name: vibration
+            description: "Niveau de vibration mesuré."
+          - name: humidity
+            description: "Humidité mesurée."
+          - name: pressure
+            description: "Pression mesurée."
+          - name: energy_consumption
+            description: "Consommation énergétique de la machine."
+          - name: machine_status
+            description: "Statut de fonctionnement de la machine."
+          - name: anomaly_flag
+            description: "Indicateur d'anomalie détectée (0 ou 1)."
+          - name: predicted_remaining_life
+            description: "Durée de vie restante estimée de la machine."
+          - name: failure_type
+            description: "Type de panne détectée, ou 'Normal' si aucune panne."
+          - name: downtime_risk
+            description: "Risque estimé d'arrêt de la machine."
+          - name: maintenance_required
+            description: "Variable cible : indique si une maintenance est nécessaire (0 ou 1)."
+          - name: _dlt_load_id
+            description: "Identifiant technique du chargement dlt (colonne ajoutée automatiquement par l'outil d'ingestion)."
+          - name: _dlt_id
+            description: "Identifiant technique unique de ligne, ajouté automatiquement par dlt."

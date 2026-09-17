@@ -1,0 +1,7 @@
+predictive_maintenance:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "C:\\Users\\alaou\\Downloads\\orchestration_project_Amina\\orchestration_project\\ingestion\\maintenance_predictive_pipeline.duckdb"
+      threads: 4

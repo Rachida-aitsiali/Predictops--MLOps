@@ -1,0 +1,76 @@
+version: 2
+
+models:
+  - name: ml_features
+    description: "Table finale prête pour le Machine Learning. Contient les données nettoyées et documentées, destinées à l'entraînement des modèles de maintenance prédictive par l'équipe ML."
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: machine_id
+        description: "Identifiant de la machine."
+        data_type: bigint
+        data_tests:
+          - not_null
+
+      - name: recorded_at
+        description: "Horodatage de la mesure, avec fuseau horaire."
+        data_type: timestamp with time zone
+        data_tests:
+          - not_null
+
+      - name: temperature
+        description: "Température mesurée par le capteur (plage observée : 35 à 122)."
+        data_type: double
+
+      - name: vibration
+        description: "Niveau de vibration mesuré. Valeurs négatives déjà exclues en amont (règle métier : vibration >= 0)."
+        data_type: double
+
+      - name: humidity
+        description: "Humidité relative mesurée, en pourcentage (0 à 100)."
+        data_type: double
+
+      - name: pressure
+        description: "Pression mesurée (doit être strictement positive)."
+        data_type: double
+
+      - name: energy_consumption
+        description: "Consommation énergétique de la machine."
+        data_type: double
+
+      - name: machine_status
+        description: "État de la machine : 0 (arrêtée), 1 (en fonctionnement), 2 (en panne)."
+        data_type: bigint
+
+      - name: anomaly_flag
+        description: "Indicateur binaire d'anomalie détectée (0 ou 1)."
+        data_type: bigint
+
+      - name: failure_type
+        description: "Type de panne détectée, ou 'Normal' si aucune panne. Limite connue : incohérence observée où failure_type = 'Normal' alors que machine_status = 2 (panne) sur environ 19% des cas de panne — probablement lié au caractère synthétique du dataset source (Kaggle)."
+        data_type: varchar
+
+      - name: downtime_risk
+        description: "Score de risque d'arrêt, entre 0 et 1. Limite connue : quasi-redondant avec anomaly_flag (99,98% des valeurs correspondent exactement à anomaly_flag), apporte peu d'information supplémentaire."
+        data_type: double
+
+      - name: predicted_remaining_life
+        description: "Durée de vie restante estimée. Limite connue : moyenne quasi identique (233-235) quel que soit machine_status, suggérant une faible valeur prédictive réelle dans ce dataset."
+        data_type: bigint
+
+      - name: maintenance_required
+        description: "Variable cible pour le Machine Learning : indique si une maintenance est nécessaire (0 ou 1)."
+        data_type: bigint
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - machine_id
+              - recorded_at

@@ -1,0 +1,420 @@
+{
+  "stable_case": {
+    "machine_id": {
+      "mean_reference": 25.55213204951857,
+      "mean_new": 25.289401290451657,
+      "std_reference": 14.38078586976158,
+      "z_score": 0.01826956895445852
+    },
+    "temperature": {
+      "mean_reference": 75.02903751406778,
+      "mean_new": 74.95999499824937,
+      "std_reference": 10.01794411490603,
+      "z_score": 0.006891884704734894
+    },
+    "vibration": {
+      "mean_reference": 50.038723521320506,
+      "mean_new": 50.00780673235633,
+      "std_reference": 14.923353712119967,
+      "z_score": 0.0020717051649769614
+    },
+    "humidity": {
+      "mean_reference": 55.018137176441165,
+      "mean_new": 54.90659380783274,
+      "std_reference": 14.441027891340736,
+      "z_score": 0.007724060187939097
+    },
+    "pressure": {
+      "mean_reference": 2.9980140052519695,
+      "mean_new": 3.0104451558045313,
+      "std_reference": 1.1520645914065544,
+      "z_score": 0.010790324297168663
+    },
+    "energy_consumption": {
+      "mean_reference": 2.7476823808928343,
+      "mean_new": 2.745083779322763,
+      "std_reference": 1.2975971763410832,
+      "z_score": 0.002002625789768481
+    },
+    "temperature_lag_1": {
+      "mean_reference": 75.01891314410098,
+      "mean_new": 74.99779485382459,
+      "std_reference": 10.041020702825891,
+      "z_score": 0.0021032015470745396
+    },
+    "temperature_diff_1": {
+      "mean_reference": 0.008893628732626939,
+      "mean_new": -0.03994743692430916,
+      "std_reference": 14.195922496242435,
+      "z_score": 0.0034404995990830467
+    },
+    "temperature_roll5_mean": {
+      "mean_reference": 75.01301342515563,
+      "mean_new": 75.02701817180616,
+      "std_reference": 4.488720967609075,
+      "z_score": 0.0031199860164147445
+    },
+    "temperature_roll5_std": {
+      "mean_reference": 9.433781255499728,
+      "mean_new": 9.43129027494934,
+      "std_reference": 3.421883977020884,
+      "z_score": 0.0007279558766794012
+    },
+    "temperature_roll15_mean": {
+      "mean_reference": 75.01236499418519,
+      "mean_new": 75.03367213473072,
+      "std_reference": 2.6157953710649164,
+      "z_score": 0.008145568564431173
+    },
+    "vibration_lag_1": {
+      "mean_reference": 50.03915345834845,
+      "mean_new": 50.00805316379655,
+      "std_reference": 14.959926153564318,
+      "z_score": 0.0020789069566689005
+    },
+    "vibration_diff_1": {
+      "mean_reference": -0.0009120932734528537,
+      "mean_new": 0.0006227472967560873,
+      "std_reference": 21.085775441533272,
+      "z_score": 7.279033083059968e-05
+    },
+    "vibration_roll5_mean": {
+      "mean_reference": 50.0361227550029,
+      "mean_new": 50.013781871579226,
+      "std_reference": 6.684775708929961,
+      "z_score": 0.00334205430315772
+    },
+    "vibration_roll5_std": {
+      "mean_reference": 14.063089005695703,
+      "mean_new": 14.048847233322814,
+      "std_reference": 5.10289916297983,
+      "z_score": 0.002790917852386664
+    },
+    "vibration_roll15_mean": {
+      "mean_reference": 50.036186456811215,
+      "mean_new": 50.00923335592204,
+      "std_reference": 3.864180771283478,
+      "z_score": 0.006975113868759519
+    },
+    "humidity_lag_1": {
+      "mean_reference": 54.98975355592529,
+      "mean_new": 55.016477272727265,
+      "std_reference": 14.4425442751589,
+      "z_score": 0.0018503468843740622
+    },
+    "humidity_diff_1": {
+      "mean_reference": 0.02841712848868486,
+      "mean_new": -0.10846315578694438,
+      "std_reference": 20.43325427065675,
+      "z_score": 0.006698897907427143
+    },
+    "humidity_roll5_mean": {
+      "mean_reference": 54.994944485448954,
+      "mean_new": 54.98222416900281,
+      "std_reference": 6.4535750823422395,
+      "z_score": 0.0019710495785423407
+    },
+    "humidity_roll5_std": {
+      "mean_reference": 13.904717788416997,
+      "mean_new": 13.895239323822956,
+      "std_reference": 3.918507810953685,
+      "z_score": 0.002418896440003331
+    },
+    "humidity_roll15_mean": {
+      "mean_reference": 54.9901812246849,
+      "mean_new": 54.982537469776425,
+      "std_reference": 3.73188662873203,
+      "z_score": 0.0020482280596706595
+    },
+    "pressure_lag_1": {
+      "mean_reference": 2.998586011484044,
+      "mean_new": 3.0084726672006408,
+      "std_reference": 1.1509354316621154,
+      "z_score": 0.008590104574605992
+    },
+    "pressure_diff_1": {
+      "mean_reference": -0.00037604613633236174,
+      "mean_new": 0.001966359631557866,
+      "std_reference": 1.6253562040157876,
+      "z_score": 0.0014411645657135444
+    },
+    "pressure_roll5_mean": {
+      "mean_reference": 3.0001818953259027,
+      "mean_new": 3.000982053464157,
+      "std_reference": 0.517934567332905,
+      "z_score": 0.00154490197936547
+    },
+    "pressure_roll5_std": {
+      "mean_reference": 1.1077141501145888,
+      "mean_new": 1.1082357125632687,
+      "std_reference": 0.31358081879861505,
+      "z_score": 0.0016632472951567852
+    },
+    "pressure_roll15_mean": {
+      "mean_reference": 3.0004673112334674,
+      "mean_new": 2.9995201225556025,
+      "std_reference": 0.3025642859684815,
+      "z_score": 0.003130536952942253
+    },
+    "energy_consumption_lag_1": {
+      "mean_reference": 2.754054442873763,
+      "mean_new": 2.7198463155786947,
+      "std_reference": 1.2979376007924066,
+      "z_score": 0.026355756450991023
+    },
+    "energy_consumption_diff_1": {
+      "mean_reference": -0.006369390895330072,
+      "mean_new": 0.025181718061674012,
+      "std_reference": 1.8331008785996254,
+      "z_score": 0.01721187814884861
+    },
+    "energy_consumption_roll5_mean": {
+      "mean_reference": 2.748479375424814,
+      "mean_new": 2.7424303914697634,
+      "std_reference": 0.5846885920689334,
+      "z_score": 0.010345650722628502
+    },
+    "energy_consumption_roll5_std": {
+      "mean_reference": 1.2472698096474413,
+      "mean_new": 1.2482550611603653,
+      "std_reference": 0.351363941122409,
+      "z_score": 0.0028040769060613782
+    },
+    "energy_consumption_roll15_mean": {
+      "mean_reference": 2.7476918419461205,
+      "mean_new": 2.7465491986765516,
+      "std_reference": 0.3415636168655115,
+      "z_score": 0.0033453307470357125
+    },
+    "recorded_hour": {
+      "mean_reference": 11.467975490809053,
+      "mean_new": 11.4186465262842,
+      "std_reference": 6.930526209487734,
+      "z_score": 0.007117636242010536
+    },
+    "recorded_dayofweek": {
+      "mean_reference": 3.0213955233212455,
+      "mean_new": 3.0071024858700546,
+      "std_reference": 2.003624347544674,
+      "z_score": 0.0071335914183246075
+    },
+    "recorded_month": {
+      "mean_reference": 1.7062898586970114,
+      "mean_new": 1.6976441754614116,
+      "std_reference": 0.7139777560645377,
+      "z_score": 0.012109177298821043
+    },
+    "alerts": []
+  },
+  "simulated_drift_case": {
+    "machine_id": {
+      "mean_reference": 25.55213204951857,
+      "mean_new": 25.460610228835815,
+      "std_reference": 14.38078586976158,
+      "z_score": 0.006364173801877998
+    },
+    "temperature": {
+      "mean_reference": 75.02903751406778,
+      "mean_new": 97.69908678254346,
+      "std_reference": 10.01794411490603,
+      "z_score": 2.2629442736403536
+    },
+    "vibration": {
+      "mean_reference": 50.038723521320506,
+      "mean_new": 70.04456208578216,
+      "std_reference": 14.923353712119967,
+      "z_score": 1.340572565013584
+    },
+    "humidity": {
+      "mean_reference": 55.018137176441165,
+      "mean_new": 54.90424409153432,
+      "std_reference": 14.441027891340736,
+      "z_score": 0.007886771340919243
+    },
+    "pressure": {
+      "mean_reference": 2.9980140052519695,
+      "mean_new": 3.001599349756159,
+      "std_reference": 1.1520645914065544,
+      "z_score": 0.003112103723118514
+    },
+    "energy_consumption": {
+      "mean_reference": 2.7476823808928343,
+      "mean_new": 2.748705139427286,
+      "std_reference": 1.2975971763410832,
+      "z_score": 0.0007881941738926159
+    },
+    "temperature_lag_1": {
+      "mean_reference": 75.01891314410098,
+      "mean_new": 75.08389476318588,
+      "std_reference": 10.041020702825891,
+      "z_score": 0.0064716148893723185
+    },
+    "temperature_diff_1": {
+      "mean_reference": 0.008893628732626939,
+      "mean_new": 0.06452480760808357,
+      "std_reference": 14.195922496242435,
+      "z_score": 0.003918813933379943
+    },
+    "temperature_roll5_mean": {
+      "mean_reference": 75.01301342515563,
+      "mean_new": 75.0036238294855,
+      "std_reference": 4.488720967609075,
+      "z_score": 0.0020918198609102346
+    },
+    "temperature_roll5_std": {
+      "mean_reference": 9.433781255499728,
+      "mean_new": 9.431081947880617,
+      "std_reference": 3.421883977020884,
+      "z_score": 0.0007888366868184846
+    },
+    "temperature_roll15_mean": {
+      "mean_reference": 75.01236499418519,
+      "mean_new": 75.03952780578129,
+      "std_reference": 2.6157953710649164,
+      "z_score": 0.010384150035803869
+    },
+    "vibration_lag_1": {
+      "mean_reference": 50.03915345834845,
+      "mean_new": 49.912183570043176,
+      "std_reference": 14.959926153564318,
+      "z_score": 0.008487333894694653
+    },
+    "vibration_diff_1": {
+      "mean_reference": -0.0009120932734528537,
+      "mean_new": 0.12026465619720951,
+      "std_reference": 21.085775441533272,
+      "z_score": 0.005746848144459367
+    },
+    "vibration_roll5_mean": {
+      "mean_reference": 50.0361227550029,
+      "mean_new": 50.047124100606894,
+      "std_reference": 6.684775708929961,
+      "z_score": 0.0016457314475483997
+    },
+    "vibration_roll5_std": {
+      "mean_reference": 14.063089005695703,
+      "mean_new": 14.132004628890225,
+      "std_reference": 5.10289916297983,
+      "z_score": 0.013505190087722425
+    },
+    "vibration_roll15_mean": {
+      "mean_reference": 50.036186456811215,
+      "mean_new": 50.03853413747716,
+      "std_reference": 3.864180771283478,
+      "z_score": 0.0006075493888351225
+    },
+    "humidity_lag_1": {
+      "mean_reference": 54.98975355592529,
+      "mean_new": 54.95261340173935,
+      "std_reference": 14.4425442751589,
+      "z_score": 0.00257157973542253
+    },
+    "humidity_diff_1": {
+      "mean_reference": 0.02841712848868486,
+      "mean_new": -0.0484777576174686,
+      "std_reference": 20.43325427065675,
+      "z_score": 0.0037632226902093928
+    },
+    "humidity_roll5_mean": {
+      "mean_reference": 54.994944485448954,
+      "mean_new": 54.96094647437903,
+      "std_reference": 6.4535750823422395,
+      "z_score": 0.0052680894908852145
+    },
+    "humidity_roll5_std": {
+      "mean_reference": 13.904717788416997,
+      "mean_new": 13.899800261791064,
+      "std_reference": 3.918507810953685,
+      "z_score": 0.001254948787440619
+    },
+    "humidity_roll15_mean": {
+      "mean_reference": 54.9901812246849,
+      "mean_new": 54.9735526880087,
+      "std_reference": 3.73188662873203,
+      "z_score": 0.004455798991367254
+    },
+    "pressure_lag_1": {
+      "mean_reference": 2.998586011484044,
+      "mean_new": 3.012989426265407,
+      "std_reference": 1.1509354316621154,
+      "z_score": 0.012514528951952247
+    },
+    "pressure_diff_1": {
+      "mean_reference": -0.00037604613633236174,
+      "mean_new": -0.010898454608021024,
+      "std_reference": 1.6253562040157876,
+      "z_score": 0.006473909193376085
+    },
+    "pressure_roll5_mean": {
+      "mean_reference": 3.0001818953259027,
+      "mean_new": 3.0025538905920874,
+      "std_reference": 0.517934567332905,
+      "z_score": 0.004579719941071416
+    },
+    "pressure_roll5_std": {
+      "mean_reference": 1.1077141501145888,
+      "mean_new": 1.1060220123192201,
+      "std_reference": 0.31358081879861505,
+      "z_score": 0.005396177616512338
+    },
+    "pressure_roll15_mean": {
+      "mean_reference": 3.0004673112334674,
+      "mean_new": 2.9985141827626025,
+      "std_reference": 0.3025642859684815,
+      "z_score": 0.006455251202610174
+    },
+    "energy_consumption_lag_1": {
+      "mean_reference": 2.754054442873763,
+      "mean_new": 2.7529087155102294,
+      "std_reference": 1.2979376007924066,
+      "z_score": 0.0008827291564972746
+    },
+    "energy_consumption_diff_1": {
+      "mean_reference": -0.006369390895330072,
+      "mean_new": -0.0042845523368579145,
+      "std_reference": 1.8331008785996254,
+      "z_score": 0.001137328874156039
+    },
+    "energy_consumption_roll5_mean": {
+      "mean_reference": 2.748479375424814,
+      "mean_new": 2.7451864898120917,
+      "std_reference": 0.5846885920689334,
+      "z_score": 0.0056318622552056176
+    },
+    "energy_consumption_roll5_std": {
+      "mean_reference": 1.2472698096474413,
+      "mean_new": 1.2482425680778086,
+      "std_reference": 0.351363941122409,
+      "z_score": 0.002768520945148663
+    },
+    "energy_consumption_roll15_mean": {
+      "mean_reference": 2.7476918419461205,
+      "mean_new": 2.7469082851773208,
+      "std_reference": 0.3415636168655115,
+      "z_score": 0.002294028784418891
+    },
+    "recorded_hour": {
+      "mean_reference": 11.467975490809053,
+      "mean_new": 11.509566087282732,
+      "std_reference": 6.930526209487734,
+      "z_score": 0.006001073398545423
+    },
+    "recorded_dayofweek": {
+      "mean_reference": 3.0213955233212455,
+      "mean_new": 3.0275103163686383,
+      "std_reference": 2.003624347544674,
+      "z_score": 0.0030518660121525002
+    },
+    "recorded_month": {
+      "mean_reference": 1.7062898586970114,
+      "mean_new": 1.7010128798299362,
+      "std_reference": 0.7139777560645377,
+      "z_score": 0.0073909569622477665
+    },
+    "alerts": [
+      "temperature",
+      "vibration"
+    ]
+  },
+  "threshold_zscore": 0.3
+}

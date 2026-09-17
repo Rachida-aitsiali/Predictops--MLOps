@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/DELL/Downloads/Partie_Maroua/Partie_Maroua/mlruns/1/models/m-930691f1cf37464090ede25accc64093/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: pickle
+    sklearn_version: 1.6.1
+    skops_trusted_types: null
+mlflow_version: 3.14.0
+model_id: m-930691f1cf37464090ede25accc64093
+model_size_bytes: 4694
+model_uuid: m-930691f1cf37464090ede25accc64093
+prompts: null
+run_id: eb779eda9254433e8f26fe3cc0040dc9
+utc_time_created: '2026-07-09 22:50:58.323137'
